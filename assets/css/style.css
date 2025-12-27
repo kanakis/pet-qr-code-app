@@ -1,0 +1,113 @@
+/* Custom styles for Pet QR Code App */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-card {
+    margin-bottom: 20px;
+}
+
+.pet-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.qr-code-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.qr-code-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #dee2e6;
+    padding: 10px;
+    background: white;
+}
+
+.btn-action {
+    margin: 2px;
+}
+
+.alert {
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.pet-info-display {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.pet-info-display h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.info-value {
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .pet-card .card-img-top {
+        height: 150px;
+    }
+    
+    .pet-info-display {
+        padding: 15px;
+    }
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Navbar adjustments */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}

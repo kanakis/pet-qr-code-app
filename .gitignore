@@ -1,0 +1,27 @@
+# Vendor directory
+/vendor/
+
+# QR codes generated at runtime
+/qr_codes/*.png
+/qr_codes/*.jpg
+/qr_codes/*.jpeg
+
+# Uploaded images
+/assets/images/uploads/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Log files
+*.log
