@@ -1,1 +1,1 @@
-# et-qr-code-app
+# pet-qr-code-app
