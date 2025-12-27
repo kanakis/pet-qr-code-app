@@ -3,7 +3,7 @@
     "description": "A PHP application for storing and managing pet information with QR code generation",
     "type": "project",
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.1",
         "endroid/qr-code": "^4.0"
     },
     "autoload": {

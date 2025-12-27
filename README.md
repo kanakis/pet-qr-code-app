@@ -2,7 +2,7 @@
 
 A PHP application for storing and managing pet information with QR code generation. Each pet gets a unique QR code that links to a responsive webpage displaying all their information.
 
-![PHP](https://img.shields.io/badge/PHP-%3E%3D7.4-blue)
+![PHP](https://img.shields.io/badge/PHP-%3E%3D8.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Features
@@ -44,7 +44,7 @@ A PHP application for storing and managing pet information with QR code generati
 
 ## Requirements
 
-- PHP 7.4 or higher
+- PHP 8.1 or higher
 - MySQL 5.7 or higher / MariaDB 10.2 or higher
 - Apache or Nginx web server
 - Composer (for dependency management)
@@ -99,6 +99,10 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'pet_qr_code_app');
 define('DB_USER', 'your_username');
 define('DB_PASS', 'your_password');
+
+// Update BASE_URL if not installed at web root
+// For subdirectory: define('BASE_URL', '/pet-qr-code-app/');
+define('BASE_URL', '/');
 ```
 
 ### 5. Set Directory Permissions
@@ -219,7 +223,7 @@ Open your web browser and navigate to:
 
 ## Technology Stack
 
-- **Backend**: PHP 7.4+
+- **Backend**: PHP 8.1+
 - **Database**: MySQL/MariaDB
 - **Frontend**: HTML5, CSS3, JavaScript
 - **CSS Framework**: Bootstrap 5

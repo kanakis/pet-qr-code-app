@@ -52,8 +52,8 @@ try {
     // Create the URL that the QR code will link to
     $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
     $host = $_SERVER['HTTP_HOST'];
-    $baseUrl = $protocol . '://' . $host;
-    $petInfoUrl = $baseUrl . '/pages/pet_info.php?token=' . $pet['unique_token'];
+    $baseUrl = BASE_URL;
+    $petInfoUrl = $protocol . '://' . $host . $baseUrl . 'pages/pet_info.php?token=' . $pet['unique_token'];
     
     // Create QR code directory if it doesn't exist
     $qrDir = __DIR__ . '/qr_codes';

@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+set -u
 
 # Pet QR Code App - Setup and Test Script
 

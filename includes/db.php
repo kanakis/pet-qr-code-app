@@ -9,6 +9,18 @@ define('DB_NAME', 'pet_qr_code_app');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
+// Application base URL configuration
+// Set this to '/' if installed at web root, or '/subdirectory/' if installed in a subdirectory
+define('BASE_URL', '/');
+
+/**
+ * Get base URL for the application
+ * @return string
+ */
+function getBaseUrl() {
+    return BASE_URL;
+}
+
 /**
  * Create database connection
  * @return PDO|null

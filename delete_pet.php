@@ -33,8 +33,8 @@ try {
     }
     
     // Delete QR code file if it exists
-    if ($pet['qr_code_path'] && file_exists($pet['qr_code_path'])) {
-        unlink($pet['qr_code_path']);
+    if ($pet['qr_code_path'] && file_exists(__DIR__ . $pet['qr_code_path'])) {
+        unlink(__DIR__ . $pet['qr_code_path']);
     }
     
     // Delete pet from database

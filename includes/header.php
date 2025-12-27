@@ -2,6 +2,13 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+// Include db.php to get BASE_URL constant
+if (!defined('BASE_URL')) {
+    require_once __DIR__ . '/db.php';
+}
+
+$baseUrl = BASE_URL;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,12 +24,12 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo isset($cssPath) ? $cssPath : '/assets/css/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo isset($cssPath) ? $cssPath : $baseUrl . 'assets/css/style.css'; ?>">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="/index.php">
+            <a class="navbar-brand" href="<?php echo $baseUrl; ?>index.php">
                 <i class="fas fa-paw"></i> Pet QR Code App
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,12 +38,12 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.php">
+                        <a class="nav-link" href="<?php echo $baseUrl; ?>index.php">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/add_pet.php">
+                        <a class="nav-link" href="<?php echo $baseUrl; ?>add_pet.php">
                             <i class="fas fa-plus-circle"></i> Add Pet
                         </a>
                     </li>
